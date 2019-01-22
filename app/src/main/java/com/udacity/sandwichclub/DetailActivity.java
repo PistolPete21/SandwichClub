@@ -74,6 +74,7 @@ public class DetailActivity extends AppCompatActivity {
 
     private void populateUI(Sandwich sandwich) {
         nameTextView.setText(sandwich.getMainName());
+        //need some way of looping through each list item so just using a for loop for now
         for (int i = 0; i < sandwich.getAlsoKnownAs().size(); i++) {
             if (i != sandwich.getAlsoKnownAs().size() - 1) {
                 alsoKnownAsTextView.append(sandwich.getAlsoKnownAs().get(i) + ", ");
@@ -84,6 +85,7 @@ public class DetailActivity extends AppCompatActivity {
 
         placeOfOriginTextView.setText(sandwich.getPlaceOfOrigin());
         descriptionTextView.setText(sandwich.getDescription());
+        //need some way of looping through each list item so just using a for loop for now
         for (int i = 0; i < sandwich.getIngredients().size(); i++) {
             if (i != sandwich.getIngredients().size() - 1) {
                 ingredientsTextView.append(sandwich.getIngredients().get(i) + ", ");
